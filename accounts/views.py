@@ -8,7 +8,7 @@ def indexView(request):
 
 @login_required
 def statementView(request):
-    return render(request,'statementhuku.html')
+    return render(request,'statementmuondu.html')
 
 def loginView(request):
     return render(request,'login/login.html')
