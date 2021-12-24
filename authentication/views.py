@@ -7,28 +7,28 @@ from django.contrib.auth import authenticate, login, logout
 def home(request):
     return render(request, "authentication/index.html")
 
-def signup(request):
+# def signup(request):
 
-    if request.method == "POST":
-        username = request.POST['username']
-        fname = request.POST['fname']
-        lname = request.POST['lname']
-        email = request.POST['email']
-        pass1 = request.POST['pass1']
-        pass2 = request.POST['pass2']
+#     if request.method == "POST":
+#         username = request.POST['username']
+#         fname = request.POST['fname']
+#         lname = request.POST['lname']
+#         email = request.POST['email']
+#         pass1 = request.POST['pass1']
+#         pass2 = request.POST['pass2']
         
 
-        myuser = User.objects.create_user(username, email, pass1,)
-        myuser.first_name = fname
-        myuser.last_name = lname
+#         myuser = User.objects.create_user(username, email, pass1,)
+#         myuser.first_name = fname
+#         myuser.last_name = lname
 
-        myuser.save()
+#         myuser.save()
 
-        messages.success(request, "Your account has been generated")
-        return redirect('signin')
+#         messages.success(request, "Your account has been generated")
+#         return redirect('signin')
 
 
-    return render(request, "authentication/signup.html")
+#     return render(request, "authentication/signup.html")
 
 
 
